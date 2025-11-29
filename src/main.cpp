@@ -2,10 +2,10 @@
 #include "Bola.hpp"
 
 int main() {
-    const int Lebar = 600;
-    const int Tinggi = 400;
+    const int Lebar = 1200;   
+    const int Tinggi = 800;   
 
-    sf::RenderWindow window(sf::VideoMode(Lebar, Tinggi), "Bola mantul kanan kiri atas bawah");
+    sf::RenderWindow window(sf::VideoMode(Lebar, Tinggi), "Tes Ubah layar");
     window.setFramerateLimit(60);
 
     Bola bola(25);
