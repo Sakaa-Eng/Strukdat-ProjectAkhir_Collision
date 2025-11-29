@@ -3,8 +3,10 @@
 Bola::Bola(float radius) {
     bentuk.setRadius(radius);
     bentuk.setFillColor(sf::Color::White);
+    
+    vx = 3.5f;
+    vy = 2.5f;
 
-    kecepatanY = 4.0f;            
     bentuk.setPosition(100, 100);
 }
 
@@ -16,11 +18,15 @@ void Bola::update(sf::RenderWindow& window) {
     sf::Vector2f pos = bentuk.getPosition();
     float diameter = bentuk.getRadius() * 2;
 
-    if (pos.y <= 0 || pos.y + diameter >= window.getSize().y) {
-        kecepatanY = -kecepatanY;   
+    if (pos.x <= 0 || pos.x + diameter >= window.getSize().x) {
+        vx = -vx;
     }
 
-    bentuk.move(0, kecepatanY);   
+    if (pos.y <= 0 || pos.y + diameter >= window.getSize().y) {
+        vy = -vy;
+    }
+
+    bentuk.move(vx, vy);
 }
 
 void Bola::draw(sf::RenderWindow& window) {

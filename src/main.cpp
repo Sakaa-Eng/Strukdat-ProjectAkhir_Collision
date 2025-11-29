@@ -5,7 +5,7 @@ int main() {
     const int Lebar = 600;
     const int Tinggi = 400;
 
-    sf::RenderWindow window(sf::VideoMode(Lebar, Tinggi), "Testing bolaaaaa");
+    sf::RenderWindow window(sf::VideoMode(Lebar, Tinggi), "Bola mantul kanan kiri atas bawah");
     window.setFramerateLimit(60);
 
     Bola bola(25);

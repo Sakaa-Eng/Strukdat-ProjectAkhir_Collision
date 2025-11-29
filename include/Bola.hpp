@@ -6,7 +6,8 @@
 class Bola {
 private:
     sf::CircleShape bentuk;
-    float kecepatanY;   
+    float vx;   
+    float vy; 
 
 public:
     Bola(float radius = 20.0f);
