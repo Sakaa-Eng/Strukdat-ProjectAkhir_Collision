@@ -1,20 +1,11 @@
-#ifndef BOLA_HPP
-#define BOLA_HPP
-
+#pragma once
 #include <SFML/Graphics.hpp>
 
 class Bola {
-private:
-    sf::CircleShape bentuk;
-    float vx;   
-    float vy; 
-
 public:
-    Bola(float radius = 20.0f);
+    sf::CircleShape shape;
+    sf::Vector2f velocity;
 
-    void setPos(float x, float y);
-    void update(sf::RenderWindow& window);
-    void draw(sf::RenderWindow& window);
+    Bola(float x, float y, float radius, sf::Vector2f vel);
+    void update(float dt, sf::RenderWindow &window);
 };
-
-#endif
