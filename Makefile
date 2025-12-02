@@ -1,12 +1,13 @@
-CXX=g++
-CXXFLAGS=-std=c++17 -Wall -O2
-LIBS=-lsfml-graphics -lsfml-window -lsfml-system
+CXX = g++
+CXXFLAGS = -std=c++17 -Wall -O2
+INCLUDE = -Iinclude
+LIBS = -lsfml-graphics -lsfml-window -lsfml-system
 
-SRC=src/main.cpp src/Bola.cpp
-INC=-Iinclude
+SRC = src/main.cpp src/Bola.cpp
+OUT = bola
 
 all:
-	$(CXX) $(CXXFLAGS) $(SRC) $(INC) -o bola $(LIBS)
+	$(CXX) $(CXXFLAGS) $(SRC) $(INCLUDE) -o $(OUT) $(LIBS)
 
 clean:
-	rm -f bola
+	rm -f $(OUT)
