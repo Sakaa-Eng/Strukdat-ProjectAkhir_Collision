@@ -65,7 +65,6 @@ jika ingin mengubah dapat menggunakan **SPASI** untuk berpindah antara mode **Br
 | D | Menghapus 50 bola |
 | SPASI | Toggle Brute Force / Quadtree |
 | S | Mengambil screenshot manual |
-| T | Toggle auto-screenshot |
 | ESC / Close Window | Keluar dari program |
 
 ---
